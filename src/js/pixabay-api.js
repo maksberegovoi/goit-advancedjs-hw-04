@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-export function getImagesApi(q) {
-  return axios
+export async function getImagesApi(q, page, perPage) {
+
+  const response = await axios
     .get('https://pixabay.com/api/', {
       headers: {
         'Content-Type': 'application/json',
@@ -10,9 +11,12 @@ export function getImagesApi(q) {
         key: '50733939-cc357c6b4bbe4fcbb86f08b26',
         q: q,
         image_type: 'photo',
+        page: page,
+        per_page: perPage,
         orientation: 'horizontal',
         safesearch: true,
-      },
+      }
     })
-    .then(response => response.data);
+
+  return response.data
 }

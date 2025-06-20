@@ -44,24 +44,7 @@ body {
       border-color: #4E75FF;
       outline: none;
     }
-    button {
-      cursor: pointer;
-      font-weight: 500;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 8px 16px;
-
-      border-radius: 8px;
-      border-color: transparent;
-
-      background: #4E75FF;
-      color: #FFF;
-    }
-    button:hover {
-      background: #6C8CFF;
-    }
   }
   .gallery {
     list-style: none;
@@ -99,7 +82,36 @@ body {
   }
 }
 
+.btn {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+  cursor: pointer;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+
+  border-radius: 8px;
+  border-color: transparent;
+
+  background: #4E75FF;
+  color: #FFF;
+}
+.btn:hover {
+  background: #6C8CFF;
+}
+.load-more-btn {
+  margin-bottom: 44px;
+  display: none;
+}
+.load-more-btn.is-active{
+  display: block;
+}
 .loader {
   width: 48px;
   height: 48px;
